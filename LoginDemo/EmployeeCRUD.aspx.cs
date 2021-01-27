@@ -57,12 +57,21 @@ namespace LoginDemo
             GetData();
         }
 
+
         protected void Button4_Click(object sender, EventArgs e)
         {
-            Deletedata();
+            TextBox1.Visible = true;
+            Button5.Visible = true;
+
         }
 
-        public void Deletedata()
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            DeleteData();
+        }
+
+
+        public void DeleteData()
         {
             int id = Convert.ToInt32(TextBox1.Text);
             EmployeeDataContext ed = new EmployeeDataContext();
